@@ -36,7 +36,7 @@ public class ShowManager {
     static final String SYS = "Ты участник шоу талантов в Майнкрафте. Пиши коротко, по-русски, смешно, без мата и злых оскорблений.";
 
     public record Performer(String name, BotEntity bot, ServerPlayer player, Data.BotDef def) {}
-    record Task(int wait, Runnable r) {}
+    record Task(int pause, Runnable r) {}
     record Chast(String target, CompletableFuture<String> ai) {}
     interface Fx { boolean tick(); }
     enum State { IDLE, RUN, PICK, RATE }
@@ -119,7 +119,7 @@ public class ShowManager {
         if (cooldown > 0) { cooldown--; return; }
         Task t = tasks.poll();
         if (t == null) return;
-        cooldown = t.wait();
+        cooldown = t.pause();
         t.r().run();
     }
 
