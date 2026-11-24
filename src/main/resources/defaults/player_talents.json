@@ -1,0 +1,35 @@
+[
+  {"id": "joke", "title": "Шутка в зал", "tags": ["humor"], "actions": [
+    {"t": "say", "text": "Заходит {random} в шахту, а там... Ладно, расскажу потом."},
+    {"t": "sound", "sound": "minecraft:entity.villager.laugh"}
+  ]},
+  {"id": "fireworks", "title": "Фейерверк", "tags": ["action"], "actions": [
+    {"t": "firework"}, {"t": "firework"}, {"t": "firework"}
+  ]},
+  {"id": "song", "title": "Мелодия нотными блоками", "tags": ["music"], "actions": [
+    {"t": "sound", "sound": "minecraft:block.note_block.harp", "pitch": 1.0, "delay": 8},
+    {"t": "sound", "sound": "minecraft:block.note_block.harp", "pitch": 1.26, "delay": 8},
+    {"t": "sound", "sound": "minecraft:block.note_block.harp", "pitch": 1.5, "delay": 8},
+    {"t": "sound", "sound": "minecraft:block.note_block.harp", "pitch": 2.0, "delay": 16},
+    {"t": "sound", "sound": "minecraft:block.note_block.bell", "pitch": 1.5}
+  ]},
+  {"id": "chast", "title": "Частушка про всех", "tags": ["music", "chastushki", "humor"], "actions": [
+    {"t": "say", "text": "Исполняю частушку на ваших глазах!"},
+    {"t": "chastushka", "name": "all"}
+  ]},
+  {"id": "lightning_show", "title": "Грозовое шоу", "tags": ["action", "mystic"], "actions": [
+    {"t": "weather", "name": "thunder"}, {"t": "lightning"}, {"t": "lightning"},
+    {"t": "say", "text": "Это всё я!"}, {"t": "weather", "name": "clear"}
+  ]},
+  {"id": "invite_bot", "title": "Дуэт с гостем", "tags": ["duet", "humor"], "actions": [
+    {"t": "say", "text": "Приглашаю на сцену друга!"},
+    {"t": "invite", "text": "Привет, {guest}! Покажем зрителям класс?"},
+    {"t": "guest_say", "text": "Я не репетировал, но давай!"},
+    {"t": "firework"}
+  ]},
+  {"id": "monologue", "title": "Драматичный монолог", "tags": ["drama"], "actions": [
+    {"t": "say", "text": "Я шёл по шахте один, и кирка была моим единственным другом."},
+    {"t": "sound", "sound": "minecraft:block.bell.use", "pitch": 0.8},
+    {"t": "say", "text": "А потом мне попался алмаз, и всё стало чуточку лучше."}
+  ]}
+]

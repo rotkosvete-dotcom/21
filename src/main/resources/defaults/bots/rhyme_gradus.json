@@ -1,0 +1,48 @@
+{
+  "id": "rhyme_gradus", "nick": "Райм и Градус", "skin": "Gradus_",
+  "likes": ["music", "humor", "chastushki"],
+  "lines": {
+    "intro": ["Балалайку настраиваем, частушки заряжаем!", "Эй, народ, не зевай, частушки слушай, подпевай!"],
+    "low": ["Рифму найти не смогли — значит, не судьба.", "Не зашло, но мы споём вам вместо этого."],
+    "mid": ["Хорошо, только припев бы поярче.", "Годно! Но можно ещё и подпеть."],
+    "high": ["Ай да номер, хоть пляши! Пишем про вас частушки!", "Огонь! Рифма сама прыгает в строку."]
+  },
+  "talents": [
+    {"id": "chast_random", "title": "Частушка про случайного героя", "tags": ["music", "humor", "chastushki"], "actions": [
+      {"t": "say", "text": "Частушки-плясовые, вам про зал, про всех живых!"},
+      {"t": "sound", "sound": "minecraft:block.note_block.banjo", "pitch": 1.2},
+      {"t": "chastushka", "name": "random"},
+      {"t": "dance", "n": 60}
+    ]},
+    {"id": "chast_all", "title": "Частушка про всех сразу", "tags": ["music", "chastushki"], "actions": [
+      {"t": "say", "text": "Сейчас споём про всех, кто собрался в этом зале!"},
+      {"t": "chastushka", "name": "all"},
+      {"t": "firework"}
+    ]},
+    {"id": "chast_player", "title": "Частушка про игрока", "tags": ["music", "chastushki", "humor"], "actions": [
+      {"t": "say", "text": "{player}, а ну иди сюда в кадр!"},
+      {"t": "chastushka", "name": "player"},
+      {"t": "sound", "sound": "minecraft:entity.villager.celebrate"}
+    ]},
+    {"id": "battle_duet", "title": "Рэп-баттл с гостем", "tags": ["music", "duet", "humor"], "actions": [
+      {"t": "say", "text": "Нужен соперник на баттл!"},
+      {"t": "invite", "text": "Вызываем {guest}! Один рифмует, другой краснеет."},
+      {"t": "chastushka", "name": "performer"},
+      {"t": "guest_say", "text": "Я ответку подготовил, только забыл на каком листе."},
+      {"t": "chastushka", "name": "random"},
+      {"t": "firework"}
+    ]},
+    {"id": "couplets_hall", "title": "Куплеты про зал", "tags": ["music", "humor"], "actions": [
+      {"t": "say", "text": "Куплет первый, про того, кто зевает в третьем ряду:"},
+      {"t": "chastushka", "name": "random"},
+      {"t": "chastushka", "name": "random"},
+      {"t": "dance", "n": 80}
+    ]},
+    {"id": "ultra_chast", "title": "Частушечный салют", "weight": 0.2, "tags": ["music", "chastushki", "action"], "actions": [
+      {"t": "title", "text": "ЧАСТУШЕЧНЫЙ САЛЮТ"},
+      {"t": "chastushka", "name": "all"},
+      {"t": "firework"}, {"t": "firework"}, {"t": "firework"},
+      {"t": "chastushka", "name": "all"}
+    ]}
+  ]
+}

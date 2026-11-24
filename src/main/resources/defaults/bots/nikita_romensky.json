@@ -1,0 +1,58 @@
+{
+  "id": "nikita_romensky", "nick": "Берг и Роменский", "skin": "Romenskyy",
+  "likes": ["mystic", "horror", "action"],
+  "lines": {
+    "intro": ["Свет гасим. Сейчас станет жутковато.", "Тише. Кажется, в зале кто-то лишний."],
+    "low": ["Духи сегодня не в настроении.", "Не впечатлило даже привидение у меня за спиной."],
+    "mid": ["Интересно... но тайна могла быть глубже.", "Средненько. Но призрак кивнул."],
+    "high": ["Мурашки по коже! Даже свечи дрогнули.", "Потрясающе. Тайна раскрыта, зал в шоке."]
+  },
+  "talents": [
+    {"id": "ritual", "title": "Ритуал со свечами", "tags": ["mystic", "horror"], "actions": [
+      {"t": "time", "n": 18000},
+      {"t": "whisper", "text": "Тише... слышите? Это шаги."},
+      {"t": "weather", "name": "thunder"},
+      {"t": "lightning"},
+      {"t": "title", "text": "РИТУАЛ"},
+      {"t": "say", "text": "Дух говорит: среди нас сидит {random}."},
+      {"t": "weather", "name": "clear"},
+      {"t": "time", "n": 6000}
+    ]},
+    {"id": "ghost", "title": "Призрак на сцене", "tags": ["mystic", "horror", "action"], "actions": [
+      {"t": "say", "text": "Я исчезаю. Не пугайтесь."},
+      {"t": "invisible", "n": 200},
+      {"t": "sound", "sound": "minecraft:entity.ghast.scream", "pitch": 0.6},
+      {"t": "whisper", "text": "Я рядом с тобой, {random}..."},
+      {"t": "sound", "sound": "minecraft:ambient.cave"},
+      {"t": "say", "text": "Ладно, я вернулся. Страшно было?"}
+    ]},
+    {"id": "prophecy", "title": "Пророчество для зала", "tags": ["mystic", "humor"], "actions": [
+      {"t": "whisper", "text": "Вижу будущее... {random} скоро найдёт алмазы и потеряет их в лаве."},
+      {"t": "sound", "sound": "minecraft:block.bell.use", "pitch": 0.7},
+      {"t": "whisper", "text": "А {random} ждёт неожиданная встреча с криперу."},
+      {"t": "whisper", "text": "Про {all} скажу так: вы все молодцы, но не все доживёте до рассвета шоу."}
+    ]},
+    {"id": "seance", "title": "Спиритический сеанс с игроком", "tags": ["mystic", "horror", "duet"], "actions": [
+      {"t": "say", "text": "Нужен смелый человек в центр круга."},
+      {"t": "invite", "name": "player", "text": "{guest}, встань к нам. Не бойся, будет почти не больно."},
+      {"t": "time", "n": 18000},
+      {"t": "lightning"},
+      {"t": "guest_say", "text": "Мне уже страшно, но я продолжаю."},
+      {"t": "whisper", "text": "Дух сообщает: {guest} — хороший человек. Но это не точно."},
+      {"t": "time", "n": 6000}
+    ]},
+    {"id": "riddle", "title": "Тайна с загадкой для зала", "tags": ["mystic", "humor"], "actions": [
+      {"t": "say", "text": "Загадка: что стоит на сцене, но не боится ни света, ни тьмы?"},
+      {"t": "wait", "n": 100},
+      {"t": "say", "text": "Ответ: тот, кто выучил текст заранее. Зал, вы не угадали!"}
+    ]},
+    {"id": "graveyard_party", "title": "Танец мёртвых", "weight": 0.2, "tags": ["mystic", "horror", "dance", "action"], "actions": [
+      {"t": "title", "text": "ТАНЕЦ МЁРТВЫХ"},
+      {"t": "time", "n": 18000},
+      {"t": "spawn", "name": "minecraft:skeleton", "n": 8},
+      {"t": "dance", "n": 120},
+      {"t": "lightning"},
+      {"t": "time", "n": 6000}
+    ]}
+  ]
+}

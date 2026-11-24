@@ -1,0 +1,20 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="talentshow"
+version="0.1.0"
+displayName="Talent Show"
+description='Talent show with YouTuber bots'
+[[dependencies.talentshow]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.talentshow]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"

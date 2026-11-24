@@ -1,0 +1,6 @@
+{
+  "enabled": false,
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "key": "",
+  "model": "openai/gpt-4o-mini"
+}

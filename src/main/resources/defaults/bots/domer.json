@@ -1,0 +1,51 @@
+{
+  "id": "domer", "nick": "MrDomer", "skin": "MrDomer",
+  "likes": ["humor", "build"],
+  "lines": {
+    "intro": ["Ну всё, зрители, готовьте попкорн.", "Сейчас будет номер, который я репетировал целых пять минут."],
+    "low": ["Ну такое. Я бы из мусора построил лучше.", "Нууу... нубовато."],
+    "mid": ["Нормально, жить можно.", "Неплохо, но я видел и поинтереснее."],
+    "high": ["Вот это да! Не к чему придраться.", "Топ! Забираю идею себе."]
+  },
+  "talents": [
+    {"id": "standup_noob", "title": "Стендап про нубов", "tags": ["humor"], "actions": [
+      {"t": "say", "text": "Построил дом из мусора. Соседи говорят: это свалка. А я говорю: это ипотека!"},
+      {"t": "sound", "sound": "minecraft:entity.villager.celebrate"},
+      {"t": "say", "text": "А {random} вчера хвастался, что не умирал в игре. Ну, он просто не считал."},
+      {"t": "sound", "sound": "minecraft:entity.villager.yes"}
+    ]},
+    {"id": "survive_nothing", "title": "Выживание без всего", "tags": ["humor", "action"], "actions": [
+      {"t": "say", "text": "Правила просты: у меня нет ничего. Даже плана."},
+      {"t": "dance", "n": 80},
+      {"t": "say", "text": "Крафтим стол из воздуха... Не вышло. Зато смешно."},
+      {"t": "firework"}
+    ]},
+    {"id": "dance_noob", "title": "Танец побеждённого нуба", "tags": ["dance", "humor"], "actions": [
+      {"t": "say", "text": "Этот танец я придумал после третьей смерти подряд."},
+      {"t": "sound", "sound": "minecraft:block.note_block.guitar", "pitch": 0.8},
+      {"t": "dance", "n": 120},
+      {"t": "firework"}
+    ]},
+    {"id": "disguise", "title": "Переодевание в {random}", "tags": ["humor", "skin"], "actions": [
+      {"t": "say", "text": "Сейчас вы увидите лучшую пародию в истории шоу."},
+      {"t": "skin", "name": "random"},
+      {"t": "say", "text": "Привет, я не MrDomer, я вообще другой человек. Честно."},
+      {"t": "dance", "n": 60},
+      {"t": "skin_reset"}
+    ]},
+    {"id": "guest_duet", "title": "Сценка с гостем", "tags": ["humor", "duet"], "actions": [
+      {"t": "say", "text": "Для следующего номера мне нужен напарник!"},
+      {"t": "invite", "text": "Выходи, {guest}, будем ссориться красиво."},
+      {"t": "guest_say", "text": "Я думал, мы будем строить, а не ссориться."},
+      {"t": "say", "text": "Строить — это потом. Сначала ссоримся."},
+      {"t": "firework"}
+    ]},
+    {"id": "rain_show", "title": "Дождь из таланта", "weight": 0.2, "tags": ["humor", "action"], "actions": [
+      {"t": "say", "text": "Редкий номер! Сегодня погода зависит от моего таланта."},
+      {"t": "weather", "name": "thunder"},
+      {"t": "lightning"},
+      {"t": "say", "text": "Это не гроза, это овации небес."},
+      {"t": "weather", "name": "clear"}
+    ]}
+  ]
+}
